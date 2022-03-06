@@ -3,10 +3,11 @@ import "../App.css"
 
 const Home = () => {
   const one_api_key = process.env.REACT_APP_API_KEY
+  const redirectUrl = "https://oneid-sso-demo.vercel.app/dashboard"
 
   const handleAuth = () => {
     window.location.replace(
-      `http://localhost:3000/auth?type=login&scope=profile&callback=http://localhost:3001/dashboard&api_key=${one_api_key}`
+      `https://oneidtech.com/auth?type=login&scope=profile&callback=${redirectUrl}&api_key=${one_api_key}`
     )
   }
 
